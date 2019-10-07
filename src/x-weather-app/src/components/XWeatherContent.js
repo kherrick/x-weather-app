@@ -8,6 +8,12 @@ const XWeatherContent = class extends LitElement {
       :host {
         padding: 1rem;
       }
+
+      header {
+        font-size: var(--x-weather-content-forecast-header-font-size, 1.5rem);
+        margin-bottom: 1rem;
+        text-align: center;
+      }
     `
   }
 
@@ -46,6 +52,8 @@ const XWeatherContent = class extends LitElement {
         placename="${JSON.parse(this.location).placename}"
       >
         <x-current primaryscale="${this.primaryscale}"></x-current>
+
+        <header><strong>Forecast</strong></header>
         <x-forecast days="${this.forecastdays}" primaryscale="${this.primaryscale}"></x-forecast>
       </x-weather>
     `

@@ -1,4 +1,5 @@
 import { LitElement, css, html } from 'lit-element'
+import '@material/mwc-button'
 
 const XWeatherHamburger = class extends LitElement {
   static get styles() {
@@ -9,8 +10,9 @@ const XWeatherHamburger = class extends LitElement {
         width: 1.5rem;
       }
 
-      div {
-        cursor: pointer;
+      mwc-button {
+        --mdc-theme-primary: #cccccc;
+        --mdc-theme-on-primary: white;
         pointer-events: all;
         position: relative;
       }
@@ -35,12 +37,12 @@ const XWeatherHamburger = class extends LitElement {
 
   render() {
     return html`
-      <div @click="${event => this._handleDrawerChange(event)}">
+      <mwc-button @click="${event => this._handleDrawerChange(event)}">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <path d="M0 0h24v24H0z" fill="black" />
           <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" fill="white" />
         </svg>
-      </div>
+      </mwc-button>
     `
   }
 }

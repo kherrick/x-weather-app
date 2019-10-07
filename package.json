@@ -1,6 +1,6 @@
 {
   "name": "x-weather-app",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "An app using x-weather that displays the current weather and forecast.",
   "author": "x-weather",
   "repository": {
@@ -21,6 +21,7 @@
     "test": "echo \"no test specified\" && exit 0"
   },
   "dependencies": {
+    "@material/mwc-button": "^0.9.1",
     "@polymer/app-layout": "^3.1.0",
     "core-js": "^3.2.1",
     "date-fns": "^2.4.1",

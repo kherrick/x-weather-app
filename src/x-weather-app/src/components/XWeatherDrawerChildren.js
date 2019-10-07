@@ -1,4 +1,5 @@
 import { LitElement, css, html } from 'lit-element'
+import '@material/mwc-button'
 
 const XWeatherDrawerChildren = class extends LitElement {
   static get styles() {
@@ -11,8 +12,11 @@ const XWeatherDrawerChildren = class extends LitElement {
       }
 
       [location] {
-        color: #ccc;
-        cursor: pointer;
+        --mdc-theme-on-primary: #111111;
+        --mdc-theme-primary: #cccccc;
+
+        margin-top: 1rem;
+        width: 100%;
       }
 
       [location]:hover {
@@ -30,8 +34,8 @@ const XWeatherDrawerChildren = class extends LitElement {
       }
 
       ul > li ul > li {
-        list-style-type: disc;
-        margin-left: 0.5rem;
+        list-style-type: none;
+        margin-left: -0.5rem;
       }
     `
   }
@@ -81,6 +85,51 @@ const XWeatherDrawerChildren = class extends LitElement {
         latitude: 47.62,
         longitude: -117.43,
         placename: 'Spokane, Washington'
+      },
+      {
+        latitude: 41.4081,
+        longitude: -92.9164,
+        placename: 'Pella, Iowa'
+      },
+      {
+        latitude: 43.6834,
+        longitude: -80.433,
+        placename: 'Elora, Ontario'
+      },
+      {
+        latitude: 43.5501,
+        longitude: -80.2497,
+        placename: 'Guelph, Ontario'
+      },
+      {
+        latitude: 37.6597,
+        longitude: -97.5754,
+        placename: 'Wichita, Kansas'
+      },
+      {
+        latitude: 52.1058,
+        longitude: -101.2676,
+        placename: 'Swan River, Manitoba'
+      },
+      {
+        latitude: 44.4001,
+        longitude: -79.6664,
+        placename: 'Barrie, Ontario'
+      },
+      {
+        latitude: 49.8844,
+        longitude: -97.1471,
+        placename: 'Winnipeg, Manitoba'
+      },
+      {
+        latitude: 41.6834,
+        longitude: -86.2501,
+        placename: 'South Bend, Indiana'
+      },
+      {
+        latitude: 40.0379,
+        longitude: -76.3056,
+        placename: 'Lancaster, Pennsylvania'
       }
     ]
   }
@@ -96,7 +145,11 @@ const XWeatherDrawerChildren = class extends LitElement {
                 ${this.locations.map(
                   location => html`
                     <li>
-                      <div location @click="${this._handleMenuLocationChange(location)}">${location.placename}</div>
+                      <mwc-button
+                        @click="${this._handleMenuLocationChange(location)}"
+                        label=${location.placename}
+                        location
+                      ></mwc-button>
                     </li>
                   `
                 )}
