@@ -15,16 +15,21 @@ export class XWeatherApp extends LitElement {
   static get styles() {
     return css`
       app-header {
+        background-color: #000;
         color: #fff;
 
+        --app-header-background-front-layer: {
+          background-color: #000;
+        }
+
         --app-header-background-rear-layer: {
-          background-color: #ccc;
+          background-color: #000;
         }
       }
 
       app-toolbar {
         background-color: #000;
-        font-size: 1.25rem;
+        font-size: 1.5rem;
       }
 
       app-drawer {
