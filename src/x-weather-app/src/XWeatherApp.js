@@ -6,6 +6,7 @@ import '@polymer/app-layout/app-toolbar/app-toolbar'
 
 import './components/XWeatherHamburger'
 import './components/XWeatherBranding'
+import './components/XWeatherBouncer'
 import './components/XWeatherContent'
 import './components/XWeatherDrawerChildren'
 
@@ -153,6 +154,7 @@ export class XWeatherApp extends LitElement {
     const renderLocation = this._handleLocationStorageOnRender(this.location)
     return renderLocation
       ? html`
+          <x-weather-bouncer></x-weather-bouncer>
           <app-header reveals>
             <app-toolbar>
               <x-weather-hamburger>Menu</x-weather-hamburger>

@@ -2,7 +2,9 @@ import { LitElement, css, html } from 'lit-element'
 
 import 'x-weather'
 
-const XWeatherContent = class extends LitElement {
+import { defineCustomElement } from '../utilities'
+
+export class XWeatherContent extends LitElement {
   static get styles() {
     return css`
       :host {
@@ -60,8 +62,4 @@ const XWeatherContent = class extends LitElement {
   }
 }
 
-if (!customElements.get('x-weather-content')) {
-  customElements.define('x-weather-content', XWeatherContent)
-}
-
-export default XWeatherContent
+defineCustomElement('x-weather-content', XWeatherContent)

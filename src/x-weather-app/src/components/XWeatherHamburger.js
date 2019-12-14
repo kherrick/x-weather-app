@@ -1,9 +1,12 @@
 import { LitElement, css, html } from 'lit-element'
+
 import '@material/mwc-button'
 import '@polymer/paper-icon-button'
 import '@polymer/iron-icons'
 
-const XWeatherHamburger = class extends LitElement {
+import { defineCustomElement } from '../utilities'
+
+export class XWeatherHamburger extends LitElement {
   static get styles() {
     return css`
       :host {
@@ -50,8 +53,4 @@ const XWeatherHamburger = class extends LitElement {
   }
 }
 
-if (!customElements.get('x-weather-hamburger')) {
-  customElements.define('x-weather-hamburger', XWeatherHamburger)
-}
-
-export default XWeatherHamburger
+defineCustomElement('x-weather-hamburger', XWeatherHamburger)

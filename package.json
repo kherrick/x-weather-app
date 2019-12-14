@@ -1,6 +1,6 @@
 {
   "name": "x-weather-app",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "An app using x-weather that displays the current weather and forecast.",
   "author": "x-weather",
   "repository": {
@@ -40,6 +40,7 @@
     "x-weather": "^2.3.0"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
     "es-dev-server": "^1.18.3",
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.3.0",

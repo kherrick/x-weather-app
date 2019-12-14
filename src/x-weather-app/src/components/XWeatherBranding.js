@@ -1,6 +1,8 @@
 import { LitElement, css, html } from 'lit-element'
 
-const XWeatherBranding = class extends LitElement {
+import { defineCustomElement } from '../utilities'
+
+export class XWeatherBranding extends LitElement {
   static get styles() {
     return css`
       :host {
@@ -36,8 +38,4 @@ const XWeatherBranding = class extends LitElement {
   }
 }
 
-if (!customElements.get('x-weather-branding')) {
-  customElements.define('x-weather-branding', XWeatherBranding)
-}
-
-export default XWeatherBranding
+defineCustomElement('x-weather-branding', XWeatherBranding)

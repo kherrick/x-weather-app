@@ -1,0 +1,30 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  --dark-theme-text-color: #aaa;
+  --dark-theme-background-color: #111;
+  --light-theme-text-color: #000;
+  --light-theme-background-color: #fff;
+
+  font-family: Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  min-height: 100vh;
+}
+
+.theme-light body, .theme-light x-weather-app {
+  background-color: var(--light-theme-background-color);
+  color: var(--light-theme-text-color);
+}
+
+.theme-dark body, .theme-dark x-weather-app {
+  --x-weather-item-temperature-min-color: #7baaf7;
+
+  background-color: var(--dark-theme-background-color);
+  color: var(--dark-theme-text-color);
+}
+
+x-weather-app {
+  background-color: var(--primary-background-color);
+}
