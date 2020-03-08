@@ -318,15 +318,29 @@ export class XWeatherDrawerChildren extends LitElement {
               <ul>
                 <li>
                   <mwc-button
-                    @click="${this._handleMenuRedirect('https://kherrick.github.io/x-postpress-app/')}"
-                    label="x-postpress-app"
+                    @click="${this._handleMenuRedirect('https://infinitym.ca/posts/')}"
+                    label="MCA Infinity Robotics - Posts"
                     class="location"
                   ></mwc-button>
                 </li>
                 <li>
                   <mwc-button
-                    @click="${this._handleMenuRedirect('https://infinitym.ca/posts/')}"
-                    label="MCA Infinity Robotics - Posts"
+                    @click="${this._handleMenuRedirect('https://kherrick.github.io/tfjs-component-playground/')}"
+                    label="TFJS Component Playground"
+                    class="location"
+                  ></mwc-button>
+                </li>
+                <li>
+                  <mwc-button
+                    @click="${this._handleMenuRedirect('https://kherrick.github.io/x-postpress-app/')}"
+                    label="XPostpress App"
+                    class="location"
+                  ></mwc-button>
+                </li>
+                <li>
+                  <mwc-button
+                    @click="${this._handleMenuRedirect('https://kherrick.github.io/pwgen/')}"
+                    label="pwgen"
                     class="location"
                   ></mwc-button>
                 </li>
