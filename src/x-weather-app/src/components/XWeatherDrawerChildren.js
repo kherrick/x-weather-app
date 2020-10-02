@@ -131,6 +131,11 @@ export class XWeatherDrawerChildren extends LitElement {
         placename: 'Guelph, Ontario'
       },
       {
+        latitude: 49.2406,
+        longitude: -98.5375,
+        placename: 'Manitou, Manitoba'
+      },
+      {
         latitude: 37.6597,
         longitude: -97.5754,
         placename: 'Wichita, Kansas'
