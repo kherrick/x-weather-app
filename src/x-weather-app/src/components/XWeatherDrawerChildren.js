@@ -337,13 +337,6 @@ export class XWeatherDrawerChildren extends LitElement {
                 </li>
                 <li>
                   <mwc-button
-                    @click="${this._handleMenuRedirect('https://kherrick.github.io/x-postpress-app/')}"
-                    label="XPostpress App"
-                    class="location"
-                  ></mwc-button>
-                </li>
-                <li>
-                  <mwc-button
                     @click="${this._handleMenuRedirect('https://kherrick.github.io/pwgen/')}"
                     label="pwgen"
                     class="location"

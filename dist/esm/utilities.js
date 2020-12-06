@@ -1,0 +1,1 @@
+var e=(e,t)=>{customElements.get(e)||customElements.define(e,t)},t=()=>"".concat(new URL(document.querySelector("base").href).pathname,"/").replace(/\/+\//g,"/"),a=()=>{var e=window.location.pathname.match(/\/([a-z0-9_-]*[\/]?)$/);return e?e[0].replace(/\//g,""):""};export{e as defineCustomElement,t as getBasePathWithTrailingSlash,a as getLastPathSegment};
