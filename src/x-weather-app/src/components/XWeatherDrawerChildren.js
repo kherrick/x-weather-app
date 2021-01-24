@@ -323,6 +323,13 @@ export class XWeatherDrawerChildren extends LitElement {
               <ul>
                 <li>
                   <mwc-button
+                    @click="${this._handleMenuRedirect('https://plainandeasy.com')}"
+                    label="GIFWorks"
+                    class="location"
+                  ></mwc-button>
+                </li>
+                <li>
+                  <mwc-button
                     @click="${this._handleMenuRedirect('https://kherrick.github.io/tfjs-component-playground/')}"
                     label="TFJS Component Playground"
                     class="location"
